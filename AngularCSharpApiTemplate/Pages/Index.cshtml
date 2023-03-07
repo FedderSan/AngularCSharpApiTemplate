@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@section Scripts {
+    @*<script defer src="/main.js"></script>
+    <script defer src="/polyfills.js"></script>
+    <script defer src="/runtime.js"></script>
+    <script defer src="/vendor.js"></script>*@
+    <script defer src="runtime.js" type="module"></script>
+    <script defer src="polyfills.js" type="module"></script>
+    <script defer src="vendor.js" type="module"></script>
+    <script defer src="main.js" type="module"></script>
+}
+<div>
+    <!-- put our SPA here -->
+    <app-root></app-root>
+    
+    @*<div id="app"></div>*@
+</div>
