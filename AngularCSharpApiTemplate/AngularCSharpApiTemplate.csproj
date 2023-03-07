@@ -7,14 +7,14 @@
   </PropertyGroup>
 
 	<Target Name="PrepublishScript" BeforeTargets="BeforePublish">
-		<Exec Command="echo Building Angular"/>
+		<Exec Command="echo Building Angular" />
 		<Exec Command="npm ci" WorkingDirectory="client-angular/" />
 		<Exec Command="npm run build" WorkingDirectory="client-angular/" />
 	</Target>
 
 	<ItemGroup>
 		<!--<Content Include="client-angular/dist/**/*">-->
-		<Content Include="client-angular/dist/client-angular/**/*">
+		<Content Include="client-angular/dist/**/*">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
